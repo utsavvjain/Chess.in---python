@@ -32,7 +32,7 @@ class TMChessPanel(tkinter.Frame) :
         self.canvas.create_line(0,30,200,30,fill="white",width=5)               
         self.canvas.create_text(100,40,text="Notification Tray",fill="white",font=("Times New Roman",12,"bold"))
         self.homeButton=self.button=tkinter.Button(self,bg="grey",fg="white",border=0,width=30,font=("Verdana",12,"bold"),command=self.showHome,image=self.homeImg)
-        self.tip.bind_widget(self.homeButton,balloonmsg="Home")
+        self.tip.bind_widget(self.homeButton,balloonmsg="Main Feed")
         self.canvas.create_window(15,54,window=self.homeButton,anchor="nw") 
         self.availableUsersButton=self.button=tkinter.Button(self,bg="grey",fg="white",border=0,width=30,font=("Verdana",12,"bold"),command=self.showAvailableUsers,image=self.activeUsersImg)
         self.tip.bind_widget(self.availableUsersButton,balloonmsg="Active Users")
