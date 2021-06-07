@@ -45,7 +45,7 @@ class TMChessPanel(tkinter.Frame) :
         self.tip.bind_widget(self.chatButton,balloonmsg="Chat box")
         self.canvas.create_window(165,54,window=self.chatButton,anchor="nw") 
         self.canvas.create_line(0,90,200,90,fill="white",width=5)               
-        self.headText=self.canvas.create_text(100,110,text="Home",fill="white",font=("Arial Rounded MT",12,"bold"))       
+        self.headText=self.canvas.create_text(100,110,text="Main Feed",fill="white",font=("Arial Rounded MT",12,"bold"))       
         self.activeUsersDataModel=ActiveUsersDataModel()        
         self.activeUsersDataModel.editCommand=inviteClicked
         self.activeUsersGrid=TMGrid(self,self.activeUsersDataModel,180,180)
@@ -91,8 +91,8 @@ class TMChessPanel(tkinter.Frame) :
         self.invitationGridWindow=None
         self.canvas.update()
     def showHome(self) :
-        self.state="Home"
-        self.canvas.itemconfigure(self.headText,text="Home")
+        self.state="Main Feed"
+        self.canvas.itemconfigure(self.headText,text="Main Feed")
         if self.activeGridWindow is not None : self.canvas.delete(self.activeGridWindow)
         if self.invitationGridWindow is not None : self.canvas.delete(self.invitationGridWindow)
         if self.chatboxWindow is not None : self.canvas.delete(self.chatboxWindow)        
