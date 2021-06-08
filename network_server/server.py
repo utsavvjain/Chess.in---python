@@ -39,7 +39,7 @@ class NetworkServer:
             sys.exit()
     def start(self) :
         server_socket=socket.socket(socket.AF_INET,socket.SOCK_STREAM)
-        server_socket.bind(("localhost",self.server_configuration.port))
+        server_socket.bind((self.server_configuration.host,self.server_configuration.port))
         server_socket.listen()
         print(f"Server is ready and is listening on port :",self.server_configuration.port)
         while True :
